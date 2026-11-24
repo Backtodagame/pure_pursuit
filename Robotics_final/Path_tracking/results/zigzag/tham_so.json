@@ -1,0 +1,123 @@
+{
+  "route": "zigzag",
+  "route_label": "Zig-Zag Path",
+  "controllers": {
+    "pp_p": {
+      "label": "PP + Kp only",
+      "groups": {
+        "Vehicle Geometry": {
+          "WB": 2.9,
+          "vehicle_width": 2.0,
+          "max_steer_deg": 45.0
+        },
+        "Environment": {
+          "corridor_width": 8.0,
+          "leg_length": 12.0,
+          "stop_on_collision": true
+        },
+        "Pure Pursuit": {
+          "Lfc": 2.5,
+          "k": 0.1
+        },
+        "P/PID controller": {
+          "Kp": 1.2,
+          "Ki": 0.0,
+          "Kd": 0.0,
+          "max_accel": 1.0,
+          "max_decel": 1.5
+        },
+        "Slow down while turing": {
+          "curvature_speed": false,
+          "regulation_radius": 8.0,
+          "min_speed": 0.5
+        },
+        "Slow down when reaching goal": {
+          "goal_slowdown_gain": 0.25
+        },
+        "completion time / Velocity": {
+          "cruise_speed": 1.0,
+          "dt": 0.05,
+          "max_time": 240.0
+        }
+      }
+    },
+    "pp_pid": {
+      "label": "PP + PID",
+      "groups": {
+        "Vehicle Geometry": {
+          "WB": 2.9,
+          "vehicle_width": 2.0,
+          "max_steer_deg": 45.0
+        },
+        "Environment": {
+          "corridor_width": 8.0,
+          "leg_length": 12.0,
+          "stop_on_collision": true
+        },
+        "Pure Pursuit": {
+          "Lfc": 2.5,
+          "k": 0.1
+        },
+        "P/PID controller": {
+          "Kp": 1.2,
+          "Ki": 0.2,
+          "Kd": 0.05,
+          "max_accel": 1.0,
+          "max_decel": 1.5
+        },
+        "Slow down while turing": {
+          "curvature_speed": false,
+          "regulation_radius": 8.0,
+          "min_speed": 0.5
+        },
+        "Slow down when reaching goal": {
+          "goal_slowdown_gain": 0.25
+        },
+        "completion time / Velocity": {
+          "cruise_speed": 1.0,
+          "dt": 0.05,
+          "max_time": 240.0
+        }
+      }
+    },
+    "pp_pid_curve": {
+      "label": "RPP + PID",
+      "groups": {
+        "Vehicle Geometry": {
+          "WB": 2.9,
+          "vehicle_width": 2.0,
+          "max_steer_deg": 45.0
+        },
+        "Environment": {
+          "corridor_width": 8.0,
+          "leg_length": 12.0,
+          "stop_on_collision": true
+        },
+        "Pure Pursuit": {
+          "Lfc": 2.5,
+          "k": 0.1
+        },
+        "P/PID controller": {
+          "Kp": 1.2,
+          "Ki": 0.2,
+          "Kd": 0.05,
+          "max_accel": 1.0,
+          "max_decel": 1.5
+        },
+        "Slow down while turing": {
+          "curvature_speed": true,
+          "regulation_radius": 8.0,
+          "min_speed": 0.5
+        },
+        "Slow down when reaching goal": {
+          "goal_slowdown_gain": 0.25
+        },
+        "completion time / Velocity": {
+          "cruise_speed": 1.0,
+          "dt": 0.05,
+          "max_time": 240.0
+        }
+      }
+    }
+  }
+}
